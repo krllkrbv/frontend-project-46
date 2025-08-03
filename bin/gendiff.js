@@ -14,4 +14,4 @@ program
     console.log(genDiff(filepath1, filepath2, options.format));
   });
 
-program.parse(process.argv);
+program.parse()
