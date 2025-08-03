@@ -6,7 +6,7 @@ import buildTree from './buildTree.js';
 
 const getTypeFile = (pathFile) => path.extname(pathFile).slice(1);
 const getData = (filepath) => parsers(readFileSync(filepath, 'utf-8'), getTypeFile(filepath));
-const buildFullPath = (filepath) => path.resolve(process.cwd(), filepath);
+const buildFullPath = (filepath) => path.resolve(filepath);
 
 export default (pathFile1, pathFile2, formatName = 'stylish') => {
   const dataFile1 = getData(buildFullPath(pathFile1));
