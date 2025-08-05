@@ -33,6 +33,8 @@ const stylishFormatter = (diffTree, depth = 1, countSpace = 4) => {
           return `${indent}  ${key}: ${formatValue(value, depth, countSpace)}`;
         case 'nested':
           return `${indent}  ${key}: ${stylishFormatter(children, depth + 1, countSpace)}`;
+		case 'removed':
+          return `${indent}- ${key}: ${formatValue(value, depth, countSpace)}`;
         default:
           throw new Error(`unknown type: ${type}`);
       }

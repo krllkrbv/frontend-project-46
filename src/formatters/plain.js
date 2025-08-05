@@ -29,6 +29,8 @@ const plainFormatter = (diffTree, parentPath = '') => {
           return plainFormatter(children, propertyPath);
         case 'unchanged':
           return null;
+		case 'removed':
+          return `Property '${propertyPath}' was removed`;
         default:
           throw new Error(`Unknown node type: ${type}`);
       }
