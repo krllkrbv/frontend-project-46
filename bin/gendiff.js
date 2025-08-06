@@ -12,5 +12,5 @@ program
   .option('-f, --format <type>', 'output format: "stylish", "plain" or "json"', 'stylish')
   .action((filepath1, filepath2, options) => {
     console.log(genDiff(filepath1, filepath2, options.format))
-  });
+  })
 program.parse()
