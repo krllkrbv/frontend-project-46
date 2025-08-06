@@ -11,7 +11,7 @@ const formatJson = (diffTree) => {
         changing: node.type,
         value1: node.oldValue,
         value2: node.newValue,
-      };
+      }
     }
     return {
       changing: node.type,
@@ -22,6 +22,6 @@ const formatJson = (diffTree) => {
     ...acc,
     [node.key]: convertNode(node),
   }), {})
-  return JSON.stringify(result);
+  return JSON.stringify(result)
 }
 export default formatJson

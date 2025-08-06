@@ -5,15 +5,15 @@ const getBracketIndentation = (depth, replacer = ' ', countSpace = 4) => replace
 
 const formatValue = (value, depth, countSpace = 4) => {
   if (!_.isObject(value) || value === null) {
-    return value;
+    return value
   }
   const indent = getIndentation(depth + 1, countSpace)
   const bracketIndent = getBracketIndentation(depth + 1, ' ', countSpace)
   const formatted = Object.entries(value)
     .map(([key, val]) => `${indent}  ${key}: ${formatValue(val, depth + 1)}`)
-    .join('\n');
+    .join('\n')
   return `{\n${formatted}\n${bracketIndent}}`
-};
+}
 
 const stylishFormatter = (diffTree, depth = 1, countSpace = 4) => {
   const indent = getIndentation(depth, countSpace)
@@ -33,7 +33,7 @@ const stylishFormatter = (diffTree, depth = 1, countSpace = 4) => {
           return `${indent}  ${key}: ${formatValue(value, depth, countSpace)}`
         case 'nested':
           return `${indent}  ${key}: ${stylishFormatter(children, depth + 1, countSpace)}`
-		case 'removed':
+        case 'removed':
           return `${indent}- ${key}: ${formatValue(value, depth, countSpace)}`
         default:
           throw new Error(`unknown type: ${type}`)
