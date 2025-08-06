@@ -4,7 +4,7 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
-    ignores: ["**/__tests__/"],
+    ignores: [".__tests__/"],
   },
   {
     files: ["**/*.{js,mjs,cjs}"],
@@ -12,6 +12,16 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: {
       globals: globals.browser,
+    },
+    rules: {
+      semi: "off",
+      "eol-last": "off",
+      quotes: "off",
+      "no-tabs": "off",
+      indent: "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-trailing-spaces": "off",
+      "arrow-parens": "off",
     },
   },
 ]);
