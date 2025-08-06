@@ -14,9 +14,9 @@ const runTest = (fileName1, fileName2, resultFileName, format) => {
   if (format === 'json') {
     const expectedJsonString = JSON.stringify(JSON.parse(expectedResult))
     const actualDiff = genDiff(filePath1, filePath2, 'json')
-    return { expected: expectedJsonString, actual: actualDiff }
-  } else { 
-	const actualDiff = genDiff(filePath1, filePath2, format)
+    return { expected: expectedJsonString, actual: actualDiff }} 
+	else {
+    const actualDiff = genDiff(filePath1, filePath2, format)
     return { expected: expectedResult, actual: actualDiff }
   }
 }
