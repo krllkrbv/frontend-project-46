@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/krllkrbv/frontend-project-46.git"
   },
-  "main": "src/index.js",
+  "main": "src/genDiff",
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
