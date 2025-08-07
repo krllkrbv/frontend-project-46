@@ -34,3 +34,4 @@ Has various output formats: stylish, plain, json
     gendiff -f json <path to file1> <path to file2> 
     
 ## Demonstration
+<a href="https://asciinema.org/a/dCNPXBTvZzo9XTYQBNYtmyBhp" target="_blank"><img src="https://asciinema.org/a/dCNPXBTvZzo9XTYQBNYtmyBhp.svg" /></a>
